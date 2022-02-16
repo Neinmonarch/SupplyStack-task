@@ -1,14 +1,14 @@
-import { DataSet } from './interfaces/dataset-interface'
+import { CountryLanguagesRecord } from './interfaces/countryLanguagesRecord-interface'
 
 // Write a function in javascript that
 // - returns the number of countries in the world
-export function getAllCountries(countriesAndLanguages: DataSet[]) {
+export function getAllCountries(countriesAndLanguages: CountryLanguagesRecord[]) {
     return countriesAndLanguages.length
 }
 
 // - finds the country with the most official languages, where they officially speak German (`de`).
 export function getCountryWithMostLanguagesAndGerman(
-    countriesAndLanguages: DataSet[]
+    countriesAndLanguages: CountryLanguagesRecord[]
 ) {
     let currentCountry = null
     let currentMax = 0
@@ -24,14 +24,14 @@ export function getCountryWithMostLanguagesAndGerman(
 }
 
 // - that counts all the official languages spoken in the listed countries.
-export function countLanguages(countriesAndLanguages: DataSet[]) {
+export function countLanguages(countriesAndLanguages: CountryLanguagesRecord[]) {
     const languages = []
     countriesAndLanguages.forEach((el) => languages.push(...el.languages))
     return new Set(languages).size
 }
 
 // - to find the country with the highest number of official languages.
-export function getCountryWithMostLanguages(countriesAndLanguages: DataSet[]) {
+export function getCountryWithMostLanguages(countriesAndLanguages: CountryLanguagesRecord[]) {
     let currentCountry = null
     let currentMax = 0
 
@@ -46,7 +46,7 @@ export function getCountryWithMostLanguages(countriesAndLanguages: DataSet[]) {
 }
 
 // - to find the most common official language(s), of all countries
-export function getMostCommonLanguage(countriesAndLanguages: DataSet[]) {
+export function getMostCommonLanguage(countriesAndLanguages: CountryLanguagesRecord[]) {
     const languages = []
     const counts: Record<string, number> = {}
     const mostCommonLanguage = []

@@ -6,7 +6,7 @@ import {
     getMostCommonLanguage,
 } from '../countries'
 
-const dataSet = [
+const countryLanguagesRecordTest = [
     {
         country: 'TestCountry 1',
         languages: ['en'],
@@ -26,21 +26,21 @@ const dataSet = [
 ]
 
 test('getAllCountries', () => {
-    expect(getAllCountries(dataSet)).toBe(4)
+    expect(getAllCountries(countryLanguagesRecordTest)).toBe(4)
 })
 
 test('getCountryWithMostLanguagesAndGerman', () => {
-    expect(getCountryWithMostLanguagesAndGerman(dataSet)).toBe('TestCountry 3')
+    expect(getCountryWithMostLanguagesAndGerman(countryLanguagesRecordTest)).toBe('TestCountry 3')
 })
 
 test('countLanguages', () => {
-    expect(countLanguages(dataSet)).toBe(5)
+    expect(countLanguages(countryLanguagesRecordTest)).toBe(5)
 })
 
 test('getCountryWithMostLanguages', () => {
-    expect(getCountryWithMostLanguages(dataSet)).toBe('TestCountry 4')
+    expect(getCountryWithMostLanguages(countryLanguagesRecordTest)).toBe('TestCountry 4')
 })
 
 test('getMostCommonLanguage', () => {
-    expect(getMostCommonLanguage(dataSet)).toStrictEqual(['nl'])
+    expect(getMostCommonLanguage(countryLanguagesRecordTest)).toStrictEqual(['nl'])
 })

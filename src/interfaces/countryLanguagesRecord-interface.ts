@@ -1,4 +1,4 @@
-export interface DataSet {
+export interface CountryLanguagesRecord {
     country: string
     languages: string[]
 }
